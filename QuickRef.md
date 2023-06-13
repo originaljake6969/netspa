@@ -12,4 +12,4 @@ SSTI:
 
 TODO
 
-<!-- NetSPA net SPA answer key walkthrough walk through -->
+<!-- NetSPA net SPA answer key walkthrough walk through solutions -->
